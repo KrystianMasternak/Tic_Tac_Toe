@@ -1,12 +1,62 @@
 package com.kodilla.tic_tac_toe;
 
+import java.util.Scanner;
+
 public class GameBoard {
 
 
-    public void board(){
-        System.out.println("| | | |");
-        System.out.println("| | | |");
-        System.out.println("| | | |");
+   private char [][] gameBoardGame = {{'|', ' ', '|', ' ', '|', ' ', '|'},
+            {'|', ' ', '|', ' ', '|', ' ', '|'},
+            {'|',' ', '|', ' ', '|', ' ', '|'}};
+    private String user;
+
+
+    public void printBoard(){
+        for (char[] row : gameBoardGame){
+            for (char c : row){
+                System.out.print(c);
+            }
+            System.out.println();
+        }
     }
+
+
+    public void chooseAField(){
+        System.out.println("Wybierz pole 1-9");
+        char symbol = 'X';
+        Scanner scan = new Scanner(System.in);
+        int pos = scan.nextInt();
+        System.out.println(pos);
+        switch (pos){
+            case 1:
+                gameBoardGame[0][1] = symbol;
+                break;
+            case 2:
+                gameBoardGame[0][3] = symbol;
+                break;
+            case 3:
+                gameBoardGame[0][5] = symbol;
+                break;
+            case 4:
+                gameBoardGame[1][1] = symbol;
+                break;
+            case 5:
+                gameBoardGame[1][3] = symbol;
+                break;
+            case 6:
+                gameBoardGame[1][5] = symbol;
+                break;
+            case 7:
+                gameBoardGame[2][1] = symbol;
+                break;
+            case 8:
+                gameBoardGame[2][3] = symbol;
+                break;
+            case 9:
+                gameBoardGame[2][5] = symbol;
+                break;
+        }
+    }
+
 }
 

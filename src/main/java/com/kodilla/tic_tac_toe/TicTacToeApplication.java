@@ -7,9 +7,9 @@ public class TicTacToeApplication {
 
     public static void main(String[] args) {
         GameBoard gameBoard = new GameBoard();
-        gameBoard.board();
+        gameBoard.chooseAField();
+        gameBoard.printBoard();
 
 
     }
-
 }

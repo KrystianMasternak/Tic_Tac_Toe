@@ -5,10 +5,9 @@ import java.util.Scanner;
 public class GameBoard {
 
 
-   private char [][] gameBoardGame = {{'|', ' ', '|', ' ', '|', ' ', '|'},
+   public char [][] gameBoardGame = {{'|', ' ', '|', ' ', '|', ' ', '|'},
             {'|', ' ', '|', ' ', '|', ' ', '|'},
             {'|',' ', '|', ' ', '|', ' ', '|'}};
-    private String user;
 
 
     public void printBoard(){
@@ -20,12 +19,18 @@ public class GameBoard {
         }
     }
 
-
-    public void chooseAField(){
+    public int pos(){
         System.out.println("Wybierz pole 1-9");
-        char symbol = 'X';
         Scanner scan = new Scanner(System.in);
         int pos = scan.nextInt();
+        return pos;
+    }
+
+
+    public void chooseAField(char [][] gameBoardGame, int pos, String user){
+        System.out.println("Wybierz pole 1-9");
+        char symbol = 'X';
+
         System.out.println(pos);
         switch (pos){
             case 1:
@@ -57,6 +62,8 @@ public class GameBoard {
                 break;
         }
     }
+
+
 
 }
 

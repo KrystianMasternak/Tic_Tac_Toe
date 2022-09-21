@@ -11,6 +11,7 @@ public class GameMechanics {
 
 
     public String checkWin(){
+       /*
         List topRow = Arrays.asList(1, 2, 3);
         List middleRow = Arrays.asList(4, 5, 6);
         List botRow = Arrays.asList(7, 8, 9);
@@ -38,6 +39,12 @@ public class GameMechanics {
                 return "Draw";
             }
         }
+
+        return "";
+
+        */
+        // W tutaj potrzeba jest użyć tablicy jednowymiarowej!!!
+
 
         return "";
     }

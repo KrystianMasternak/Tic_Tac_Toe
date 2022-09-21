@@ -10,11 +10,13 @@ public class TicTacToeApplication {
         Scanner scan = new Scanner(System.in);
         GameMechanics gameMechanics = new GameMechanics();
 
-        boolean win = false;
 
-        while (!win) {
+        while (true) {
             int pos = gameBoard.pos();
             gameBoard.chooseAField(gameBoard.gameBoardGame, pos, "player1");
+            gameBoard.printBoard();
+            int pos2 = gameBoard.pos();
+            gameBoard.chooseAField(gameBoard.gameBoardGame, pos2, "player2");
             gameBoard.printBoard();
             gameMechanics.checkWin();
         }

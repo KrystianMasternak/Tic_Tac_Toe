@@ -29,7 +29,13 @@ public class GameBoard {
 
     public void chooseAField(char [][] gameBoardGame, int pos, String user){
         System.out.println("Wybierz pole 1-9");
-        char symbol = 'X';
+        char symbol = ' ';
+
+        if (user.equals("player1")){
+            symbol = 'X';
+        } else if (user.equals("player2")) {
+            symbol = 'O';
+        }
 
         System.out.println(pos);
         switch (pos){

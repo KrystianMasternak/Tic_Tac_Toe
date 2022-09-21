@@ -10,7 +10,7 @@ public class GameMechanics {
 
 
 
-    public boolean checkWin(){
+    public String checkWin(){
         List topRow = Arrays.asList(1, 2, 3);
         List middleRow = Arrays.asList(4, 5, 6);
         List botRow = Arrays.asList(7, 8, 9);
@@ -31,14 +31,14 @@ public class GameMechanics {
         winningPos.add(cross2);
         for (List l : winningPos){
             if (player1Pos.containsAll(l)){
-                return true;
+                return "Player1 win";
             } else if (player2Pos.containsAll(l)) {
-                return true;
+                return "Player2 win";
             } else if (player1Pos.size() + player2Pos.size() == 9) {
-                return false;
+                return "Draw";
             }
         }
 
-        return true;
+        return "";
     }
 }
